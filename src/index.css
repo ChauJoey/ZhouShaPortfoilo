@@ -1753,7 +1753,6 @@ html {
   margin: 0 auto;
   pointer-events: none;
   filter: blur(1px);
-  /* opacity: 1; */
 }
 
 .sphere-animation {
@@ -1776,5 +1775,28 @@ html {
 @media (min-width: 500px) {
   .sphere path {
     stroke-width: 0.4px;
+  }
+}
+
+.star-dot {
+  position: absolute;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0.5;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  animation-name: star-twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.4);
   }
 }

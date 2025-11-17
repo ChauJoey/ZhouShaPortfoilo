@@ -4,31 +4,43 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Card, CardContent } from './ui/card';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     message: '',
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Message sent! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    const recipient = 'zhousha31@gmail.com';
+    const subject = encodeURIComponent(`Portfolio inquiry from ${formData.name || 'Visitor'}`);
+    const body = encodeURIComponent(
+      `Hi Zhou,\n${formData.message}\n\nBest Regards\n ${formData.name || 'Secrete Man'}`,
+    );
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${recipient}&su=${subject}&body=${body}`;
+    const newWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+
+    if (newWindow) {
+      toast.info('The Gmail compose window should now be open. If it didn’t appear, please check your browser’s pop-up settings.');
+    } else {
+      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+      toast.info('Attempted to send via the default mail client.');
+    }
   };
 
   const contactInfo = [
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@example.com',
+      value: 'zhousha31@gmail.com',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Sydney, NSW',
     },
   ];
 
@@ -78,7 +90,7 @@ export function Contact() {
                       required
                     />
                   </div>
-                  <div>
+                  {/* <div>
                     <Input
                       type="email"
                       placeholder="Your Email"
@@ -88,7 +100,7 @@ export function Contact() {
                       }
                       required
                     />
-                  </div>
+                  </div> */}
                   <div>
                     <Textarea
                       placeholder="Your Message"

@@ -1,4 +1,5 @@
 import { ArrowDown, Github, Linkedin } from "lucide-react";
+import StarField from "./StarField";
 import SphereAnimation from "./SphereAnimation";
 import { Button } from "./ui/button";
 
@@ -13,9 +14,11 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-[#03030a] via-[#050505] to-[#020105]"
     >
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-80">
+      <StarField amount={800} />
+
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-80 z-0">
         <SphereAnimation />
       </div>
 

@@ -27,14 +27,14 @@ function ProjectCard({ project }: { project: any }) {
           ))}
         </div>
         <div className="flex gap-2">
-          <Button size="sm" variant="outline" className="gap-2">
+          {/* <Button size="sm" variant="outline" className="gap-2">
             <Github className="h-4 w-4" />
             Code
           </Button>
           <Button size="sm" className="gap-2">
             <ExternalLink className="h-4 w-4" />
             Live Demo
-          </Button>
+          </Button> */}
         </div>
       </CardContent>
     </Card>
@@ -42,26 +42,48 @@ function ProjectCard({ project }: { project: any }) {
 }
 
 export function Projects() {
-  const projects = [
-    {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration and admin dashboard',
-      tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      imageUrl: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvbmxpbmUlMjBzaG9wcGluZ3xlbnwxfHx8fDE3NjI0MDU5MDF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    },
-    {
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates and team features',
-      tags: ['TypeScript', 'Next.js', 'Supabase'],
-      imageUrl: 'https://images.unsplash.com/photo-1652177217044-4f62dacf0ceb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9kdWN0aXZpdHklMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYyMzY5MzIzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'Interactive weather dashboard with forecasts and beautiful data visualizations',
-      tags: ['React', 'APIs', 'Recharts'],
-      imageUrl: 'https://images.unsplash.com/photo-1664976694406-3e9f37768a2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWF0aGVyJTIwY2xvdWR8ZW58MXx8fHwxNzYyNDQwNTY0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    },
-  ];
+const projects = [
+  {
+    title: "Reinforcement Learning — Flappy Bird Agent",
+    description:
+      "Developed and optimized a Deep Q-learning agent capable of autonomously surviving over 10 minutes by tuning hyperparameters, image preprocessing, and training stability control.",
+    tags: ["Python", "Deep Q-Learning", "OpenAI Gym", "NumPy", "Computer Vision"],
+    imageUrl:
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1080&auto=format",
+  },
+  {
+    title: "GP Appointment Web Platform",
+    description:
+      "Built a web-based system for managing GP appointments including real-time data retrieval, SQL-driven backend logic, and improved user experience through optimized data flow.",
+    tags: ["Python", "SQL", "Web App", "Backend", "Data Modeling"],
+    imageUrl:
+      "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1080&auto=format",
+  },
+  {
+    title: "Solar Panel Image Classifier",
+    description:
+      "Implemented and expanded a convolutional neural network based on LeNet for solar panel usability detection using data preprocessing, augmentation, and layer enhancement.",
+    tags: ["Python", "CNN", "TensorFlow/PyTorch", "Image Classification", "Data Preprocessing"],
+    imageUrl:
+      "https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1080&auto=format",
+  },
+  {
+    title: "Machine Learning Competition Framework",
+    description:
+      "Collaborated on feature extraction, hyperparameter tuning, and model refinement with an emphasis on maintainability, readability, and reproducible experiment tracking.",
+    tags: ["Python", "ML Pipeline", "Model Tuning", "Feature Engineering", "Clean Code"],
+    imageUrl:
+      "https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?q=80&w=1080&auto=format",
+  },
+  {
+  title: "Interactive Personal Portfolio",
+  description:
+    "A responsive and animated portfolio website featuring custom components, sci-fi themed UI, and motion-focused user experience. Built to strengthen front-end engineering skills and modern development workflow.",
+  tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Anime.js"],
+  imageUrl:
+    "https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=1080&auto=format",
+  }
+];
 
   return (
     <section id="projects" className="py-24 bg-muted/50">

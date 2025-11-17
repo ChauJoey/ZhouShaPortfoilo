@@ -51,8 +51,8 @@ export default function SphereAnimation() {
             anime({
               targets: spherePathEls[i],
               stroke: {
-                value: ["rgba(255,75,75,1)", "rgba(80,80,80,.35)"],
-                duration: 500,
+                value: ["rgba(0, 193, 197, 1)", "rgba(80,80,80,.35)"],
+                duration: 1500,
               },
               translateX: [2, -4],
               translateY: [2, -4],

@@ -1,20 +1,37 @@
 import { Badge } from './ui/badge';
 
 export function Skills() {
-  const skillCategories = [
-    {
-      category: 'Frontend',
-      skills: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML/CSS'],
-    },
-    {
-      category: 'Backend',
-      skills: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'REST APIs'],
-    },
-    {
-      category: 'Tools & Other',
-      skills: ['Git', 'Docker', 'Figma', 'AWS', 'CI/CD'],
-    },
-  ];
+const skillCategories = [
+  {
+    category: "Core Skills",
+    skills: [
+      "Python",
+      "Object-Oriented Programming (OOP)",
+      "Basic C++ Foundation",
+      "RESTful API Concepts",
+    ],
+  },
+  {
+    category: "Learning & Building (AI & Backend)",
+    skills: [
+      "Large Language Models (LLM) Integration",
+      "AI Application Development",
+      "Spring Boot Backend",
+      "React + TypeScript (Frontend Development)",
+      "Database Fundamentals (SQL & NoSQL)",
+    ],
+  },
+  {
+    category: "Tools & Development Workflow",
+    skills: [
+      "Git & GitHub",
+      "Swagger / OpenAPI",
+      "Vercel Deployment",
+      "Figma (UI Wireframing)",
+      "VS Code & IntelliJ",
+    ],
+  },
+];
 
   return (
     <section id="skills" className="py-24">
