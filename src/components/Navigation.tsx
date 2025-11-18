@@ -60,9 +60,9 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => scrollToSection('home')}
-            className="text-xl tracking-tight hover:text-primary transition-colors"
+            className="text-xl tracking-tight hover:text-primary transition-colors bold"
           >
-            Joey
+            Zhou.SHA
           </button>
 
           {/* Desktop Navigation */}
